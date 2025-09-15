@@ -1,0 +1,620 @@
+/* Base styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container for centering content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Back button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #f2f2f2;
+    border: 1px solid #3ED2F7;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #3ED2F7;
+}
+
+/* Header styles - MODIFIED (logo and heading moved up) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px 0 15px;
+    z-index: 900;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    height: 110px;
+}
+
+.logo {
+    width: 72px;
+    height: 36px;
+    margin: 0 auto 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.project-name {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #f2f2f2;
+    margin-top: -2px;
+}
+
+/* Main content styles - MODIFIED (padding increased for larger header) */
+main {
+    padding: 140px 0 50px;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+/* Gallery section */
+.gallery-section {
+    margin-bottom: 60px;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #1a1a1a;
+}
+
+.main-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.67%;
+    overflow: hidden;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: pinch-zoom;
+    cursor: pointer;
+}
+
+.main-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.main-image.active {
+    opacity: 1;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* Image control buttons */
+.image-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.control-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border-color: #3ED2F7;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Fullscreen mode */
+.fullscreen-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    overflow: hidden;
+}
+
+.fullscreen-mode.grabbing {
+    cursor: grabbing;
+}
+
+.fullscreen-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.fullscreen-image-wrapper {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+}
+
+/* Fullscreen controls */
+.fullscreen-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 2001;
+}
+
+.fullscreen-control-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.fullscreen-control-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Project description section */
+.project-description {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+.description-text {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.features-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-list li:before {
+    content: "•";
+    color: #3ED2F7;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* My Role section */
+.role-section {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid #444;
+    position: relative;
+    z-index: 1;
+}
+
+.role-details {
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.role-title {
+    font-size: 1.4rem;
+    color: #3ED2F7;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.role-responsibilities {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.role-responsibilities li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.role-responsibilities li:before {
+    content: "•";
+    color: #3ED2F7;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Footer styles - MODIFIED (height reduced) */
+footer {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 800;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    height: 45px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-link {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #3ED2F7;
+}
+
+/* Responsive styles - MODIFIED */
+@media (max-width: 768px) {
+    main {
+        padding: 120px 0 40px;
+    }
+    
+    .project-name {
+        font-size: 1.5rem;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .footer-links {
+        gap: 20px;
+    }
+    
+    .footer-link {
+        font-size: 0.85rem;
+    }
+    
+    .role-title {
+        font-size: 1.2rem;
+    }
+    
+    .back-button {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+    
+    header {
+        padding: 20px 0 15px;
+        height: 90px;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 30px;
+        margin: 0 auto 2px;
+    }
+    
+    .project-name {
+        margin-top: -2px;
+    }
+    
+    footer {
+        height: 40px;
+        padding: 8px 0;
+    }
+    
+    .fullscreen-control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 110px 0 35px;
+    }
+    
+    header {
+        padding: 15px 0 10px;
+        height: 80px;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 25px;
+        margin: 0 auto 1px;
+    }
+    
+    .project-name {
+        font-size: 1.3rem;
+        margin-top: -1px;
+    }
+    
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .control-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .thumbnails {
+        gap: 8px;
+    }
+    
+    .thumbnail {
+        width: 50px;
+        height: 38px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .role-details {
+        padding: 15px;
+    }
+    
+    .role-responsibilities li {
+        padding-left: 20px;
+    }
+    
+    back-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+    
+    footer {
+        height: 35px;
+        padding: 5px 0;
+    }
+    
+    .fullscreen-controls {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .fullscreen-control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
