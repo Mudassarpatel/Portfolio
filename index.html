@@ -118,7 +118,7 @@
             display: inline-block;
             margin: 5px 0 10px 0; /* Reduced top margin */
             transition: all 0.3s ease;
-            width: 35%; /* Increased by 10% from 23.52% */
+            width: 40%; /* Increased by 10% from 23.52% */
             position: relative;
         }
 
@@ -148,7 +148,7 @@
             display: inline-block;
             margin: 0 0 5px 0; /* Reduced bottom margin by 50% */
             transition: all 0.3s ease;
-            width: 20%; /* Increased by 10% from 11.76% */
+            width: 28%; /* Increased by 10% from 11.76% */
         }
 
         .resume-btn:hover {
@@ -168,8 +168,8 @@
         .social-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px; /* Reduced margin above social buttons */
+            gap: 10px;
+            margin-top: 10px; /* Reduced margin above social buttons */
             flex-wrap: wrap;
         }
 
@@ -192,48 +192,58 @@
         }
 
         .social-btn img {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
             transition: all 0.3s ease;
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 90%;
+            }
+            
+            .text-box-content {
+                font-size: 18px;
+            }
+        }
+
         @media (max-width: 768px) {
             .photo-container {
-                width: 185.9px;
-                height: 185.9px;
-                margin: 0 auto 26px;
+                width: 180px;
+                height: 180px;
+                margin: 0 auto 25px;
                 border: 2px solid white;
                 box-shadow: 0 0 15px 4px rgba(62, 210, 247, 0.6); /* Adjusted glow for tablet */
             }
             
             .name {
-                font-size: 25.2px; /* Increased by 5% from 24px */
+                font-size: 28px;
             }
             
             .title {
-                font-size: 15.12px; /* Increased by 5% from 14.4px */
+                font-size: 17px;
                 font-weight: 400; /* Changed from 600 (bold) to 400 (regular) */
             }
             
             .location {
-                font-size: 16.8px; /* Increased by 5% from 16px */
+                font-size: 16px;
                 margin-bottom: 12px; /* Increased for tablet */
             }
             
             .nationality {
-                font-size: 15.75px; /* Increased by 5% from 15px */
+                font-size: 15px;
                 margin-bottom: 5px;
             }
             
             .dob {
-                font-size: 15.75px; /* Increased by 5% from 15px */
+                font-size: 15px;
                 margin-bottom: 18px;
             }
             
             .text-box {
-                padding: 8px 20px; /* Further reduced for tablet */
+                padding: 12px 20px;
                 margin-bottom: 12px; /* Reduced for tablet */
             }
             
@@ -244,12 +254,12 @@
             }
             
             .portfolio-btn {
-                width: 29.568%; /* Increased by 10% from 26.88% */
+                width: 45%;
                 margin: 4px 0 8px 0; /* Reduced for tablet */
             }
             
             .resume-btn {
-                width: 14.784%; /* Increased by 10% from 13.44% */
+                width: 30%;
                 margin: 0 0 6px 0; /* Reduced by 50% for tablet */
             }
             
@@ -258,8 +268,8 @@
             }
             
             .social-btn {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
             }
             
             .social-btn img {
@@ -268,45 +278,49 @@
             }
             
             .social-buttons {
-                gap: 12.5px;
+                gap: 12px;
             }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
             .photo-container {
-                width: 157.3px;
-                height: 157.3px;
+                width: 150px;
+                height: 150px;
                 margin: 0 auto 20px;
                 border: 2px solid white;
                 box-shadow: 0 0 12px 3px rgba(62, 210, 247, 0.6); /* Adjusted glow for mobile */
             }
             
             .name {
-                font-size: 20.16px; /* Increased by 5% from 19.2px */
+                font-size: 24px;
             }
             
             .title {
-                font-size: 12.6px; /* Increased by 5% from 12px */
+                font-size: 15px;
                 font-weight: 400; /* Changed from 600 (bold) to 400 (regular) */
             }
             
             .location {
-                font-size: 15.75px; /* Increased by 5% from 15px */
+                font-size: 14px;
                 margin-bottom: 10px; /* Increased for mobile */
             }
             
             .nationality {
-                font-size: 14.7px; /* Increased by 5% from 14px */
+                font-size: 13px;
                 margin-bottom: 5px;
             }
             
             .dob {
-                font-size: 14.7px; /* Increased by 5% from 14px */
+                font-size: 13px;
                 margin-bottom: 15px;
             }
             
             .text-box {
-                padding: 6px 20px; /* Further reduced for mobile */
+                padding: 10px 15px;
                 margin-bottom: 10px; /* Reduced for mobile */
             }
             
@@ -317,12 +331,12 @@
             }
             
             .portfolio-btn {
-                width: 33.264%; /* Increased by 10% from 30.24% */
+                width: 50%;
                 margin: 3px 0 7px 0; /* Reduced for mobile */
             }
             
             .resume-btn {
-                width: 16.632%; /* Increased by 10% from 15.12% */
+                width: 35%;
                 margin: 0 0 5px 0; /* Reduced by 50% for mobile */
             }
             
@@ -331,8 +345,8 @@
             }
             
             .social-btn {
-                width: 64px;
-                height: 64px;
+                width: 60px;
+                height: 60px;
             }
             
             .social-btn img {
@@ -342,6 +356,51 @@
             
             .social-buttons {
                 gap: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .photo-container {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .name {
+                font-size: 22px;
+            }
+            
+            .title {
+                font-size: 14px;
+            }
+            
+            .location {
+                font-size: 13px;
+            }
+            
+            .nationality, .dob {
+                font-size: 12px;
+            }
+            
+            .text-box-content {
+                font-size: 13px;
+            }
+            
+            .portfolio-btn {
+                width: 55%;
+            }
+            
+            .resume-btn {
+                width: 40%;
+            }
+            
+            .social-btn {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .social-btn img {
+                width: 28px;
+                height: 28px;
             }
         }
     </style>
