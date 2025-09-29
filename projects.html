@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Architecture Projects</title>
+  <title>Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pdf-viewer.css">
 </head>
 
+
 <body>
   <!-- Back Button -->
-  <a href="./projects.html" class="back-button">← Back</a>
+  <a href="./index.html" class="back-button">← Back</a>
 
 </head>
 
 
   <!-- Header -->
-  <header><center>
+  <header>
     <div class="container">
-      <a href="./index.html" class="logo-link">
+      <a href="index.html" class="logo-link">
         <div class="logo">
           <img src="images/logo.png" alt="Personal Logo" class="logo-img">
         </div>
       </a>
-      <h1 class="project-name"> :: Architecture Projects :: </h1>
-    </div></center>
+      <h1 class="project-name"> :: Projects :: </h1>
+    </div>
   </header>
 
 
@@ -57,7 +58,7 @@
     .container {
         width: 100%;
         max-width: 1200px;
-        margin: 0;
+        margin: auto;
         padding: 0 20px;
     }
 
@@ -72,15 +73,16 @@
     /* Portfolio Section */
     .portfolio-section {
         padding: 40px 20px;
-        max-width: 1200px;
+        max-width: 800px;
         margin: 0 auto;
     }
 
     .portfolio-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-        margin-top: 30px; /* Added space above the first row */
+        margin-top: 20px; /* Added space above the first row */
+        margin-bottom: 20px;
     }
 
     .portfolio-item {
@@ -201,91 +203,20 @@
             
             <!-- Project 1 -->
             <div class="portfolio-item">
-                <a href="./arch-marat-mosque.html" class="project-link">
-                    <img src="./images/maratmosque/image1.jpg" alt="Marat Mosque - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Marat Mosque - Riyadh</h3>
+                <a href="./interiorprojects.html" class="project-link">
+                    <img src="./images/interiorprojects.png" alt="Interior Projects" class="portfolio-image">
+                    <h3 class="portfolio-title">Interior projects</h3>
                 </a>
             </div>
 
                 <!-- Project 2 -->
             <div class="portfolio-item">
-                <a href="./arch-nakheel-palace.html" class="project-link">
-                    <img src="./images/nakheelpalace/1.jpg" alt="Residential Palace Complex - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Residential Palace Complex - Riyadh</h3>
+                <a href="./archprojects.html" class="project-link">
+                    <img src="./images/archprojects.png" alt="Architecture Projects" class="portfolio-image">
+                    <h3 class="portfolio-title">Architecture Projects</h3>
                 </a>
             </div>
             
-            <!-- Project 3 -->
-            <div class="portfolio-item">
-                <a href="./arch-sfm-ryd1.html" class="project-link">
-                    <img src="./images/arch-sfm-ryd1/1.jpg" alt="Private Villa - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Villa - Riyadh</h3>
-                </a>
-            </div>
-            
-              <!-- Project 4 -->
-            <div class="portfolio-item">
-                <a href="./arch-sfm-ryd2.html" class="project-link">
-                    <img src="./images/arch-sfm-ryd2/1.jpg" alt="Private Villa - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Villa - Riyadh</h3>
-                </a>
-            </div>
-            
-            <!-- Project 5 -->
-            <div class="portfolio-item">
-                <a href="./arch-saf-exterior.html" class="project-link">
-                    <img src="./images/safexterior/1.jpg" alt="private Villa - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Villa - Riyadh</h3>
-                </a>
-            </div>
-            
-            <!-- Project 6 -->
-            <div class="portfolio-item">
-                <a href="./arch-saf-poolbldg.html" class="project-link">
-                    <img src="./images/safpoolbldg/1.jpg" alt="Private Villa - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Villa - Riyadh</h3>
-                </a>
-            </div>
-            
-            <!-- Project 7 -->
-            <div class="portfolio-item">
-                <a href="./arch-saf-camptrailer.html" class="project-link">
-                    <img src="./images/camptrailer/1.JPG" alt="Twin Camping Trailers - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Twin Camping Trailers  - Riyadh</h3>
-                </a>
-            </div>
-            
-            
-              <!-- Project 8 -->
-            <div class="portfolio-item">
-                <a href="./arch-itaraha.html" class="project-link">
-                    <img src="./images/istaraha/2.jpg" alt="Private Istaraha - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Istaraha - Riyadh</h3>
-                </a>
-            </div>
-
-
-
-
-                <!-- Project 9 -->
-            <div class="portfolio-item">
-                <a href="./arch-pvtvilla2.html" class="project-link">
-                    <img src="./images/pvtvilla2/1.jpg" alt="Private Villa - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Private Villa - Riyadh</h3>
-                </a>
-            </div>
-
-                    
-            <!-- Project 10 -->
-            <div class="portfolio-item">
-                <a href="./arch-pvtvilla3.html" class="project-link">
-                    <img src="./images/pvtvilla3/1.jpg" alt="Art Gallery - Riyadh" class="portfolio-image">
-                    <h3 class="portfolio-title">Art Gallery - Riyadh</h3>
-                </a>
-            </div>
-            
-          
-
             
         </div>
     </section>

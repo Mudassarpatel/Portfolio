@@ -1,295 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pdf-viewer.css">
-</head>
-
-
-<body>
-  <!-- Back Button -->
-  <a href="https://mudassarpatel.my.canva.site/mudassar-portfolio/#aboutme" class="back-button">← Back</a>
-
-</head>
-
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <a href="https://mudassarpatel.my.canva.site/mudassar-portfolio/#home" class="logo-link">
-        <div class="logo">
-          <img src="images/logo.png" alt="Personal Logo" class="logo-img">
-        </div>
-      </a>
-      <h1 class="project-name"> :: Projects :: </h1>
-    </div>
-  </header>
-
-
-
-
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interior Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Base styles and reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #1a1a1a;
-        color: #f2f2f2;
-        line-height: 1.6;
-        overflow-x: hidden;
-    }
-
-    /* Container for centering content */
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 0 20px;
-    }
-
-    /* Main content styles */
-    main {
-        padding: 50px 0;
-        position: relative;
-        z-index: 1;
-        min-height: 100vh;
-    }
-
-    /* Portfolio Section */
-    .portfolio-section {
-        padding: 40px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        margin-top: 20px; /* Added space above the first row */
-        margin-bottom: 20px;
-    }
-
-    .portfolio-item {
-        background: #000; /* Changed to black */
-        border-radius: 0;
-        overflow: hidden;
-        box-shadow: none;
-        transition: transform 0.3s ease;
-        border: 1px solid #3ED2F7; /* Changed border color */
-    }
-
-    .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(62, 210, 247, 0.3); /* Added blue glow on hover */
-        border-color: #3ED2F7;
-    }
-
-    .portfolio-image {
-        width: 100%;
-        height: 250px;
-      
-        object-fit: cover;
-        display: block;
-    
-    }
-
-    .portfolio-title {
-        padding: 7.5px;
-        text-align: center;
-        font-size: 0.96rem;
-        font-weight: 600;
-        color: #f2f2f286; /* Changed text color to f2f2f286 */
-        text-decoration: none;
-    }
-
-    .project-link {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
-
-    /* Lightbox Modal */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        animation: fadeIn 0.3s;
-    }
-
-    .modal-content {
-        margin: auto;
-        display: block;
-        max-width: 90%;
-        max-height: 80%;
-        margin-top: 5%;
-        border-radius: 8px;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: color 0.3s;
-    }
-
-    .close:hover {
-        color: #ccc;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-        .portfolio-grid {
-            grid-template-columns: repeat(2, 1fr);
-            margin-top: 30px; /* Consistent spacing on tablet */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        main {
-            padding: 40px 0;
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
-    }
 
-    @media (max-width: 768px) {
-        .portfolio-grid {
-            grid-template-columns: 1fr;
-            margin-top: 30px; /* Consistent spacing on mobile */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
         }
-        
-        main {
-            padding: 30px 0;
+
+        .photo-container {
+            width: 214.5px;
+            height: 214.5px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3ED2F7;
+            position: relative;
+            border: 2px solid white;
+            box-shadow: 0 0 20px 5px rgba(62, 210, 247, 0.6); /* Added glow shadow */
         }
-    }
-  </style>
-</head>
 
-
-<body>
-  <!-- Main Content -->
-  <main>
-    <!-- Portfolio Section -->
-    <section class="portfolio-section">
-        <div class="portfolio-grid">
-          
-            
-            <!-- Project 1 -->
-            <div class="portfolio-item">
-                <a href="./interiorprojects.html" class="project-link">
-                    <img src="./images/interiorprojects.png" alt="Interior Projects" class="portfolio-image">
-                    <h3 class="portfolio-title">Interior projects</h3>
-                </a>
-            </div>
-
-                <!-- Project 2 -->
-            <div class="portfolio-item">
-                <a href="./archprojects.html" class="project-link">
-                    <img src="./images/archprojects.png" alt="Architecture Projects" class="portfolio-image">
-                    <h3 class="portfolio-title">Architecture Projects</h3>
-                </a>
-            </div>
-            
-            
-        </div>
-    </section>
-  </main>
-
-  <!-- Scripts -->
-  <script>
-    // interior.js
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get the modal and modal image elements
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.close');
-        
-        // Get all project links
-        const projectLinks = document.querySelectorAll('.project-link');
-        
-        // Add click event to each project link
-        projectLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                // Allow default link behavior (navigation to the href)
-                // Remove e.preventDefault() to allow links to work
-            });
-        });
-        
-        // Close the modal when the close button is clicked
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
+        .photo-container img {
+            width: 93%;
+            height: 93%;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
         }
-        
-        // Close the modal when clicking outside the image
-        window.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
+
+        .name {
+            font-family: 'Canva Sans', Arial, sans-serif;
+            font-size: 34.65px; /* Increased by 5% from 33px */
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 20.475px; /* Increased by 5% from 19.5px */
+            color: #3ED2F7;
+            margin-bottom: 5px;
+            font-weight: 400; /* Changed from 600 (bold) to 400 (regular) */
+        }
+
+        .location {
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 17.325px; /* Increased by 5% from 16.5px */
+            margin-bottom: 15px; /* Increased margin to create 1 line gap */
+            font-weight: 500;
+        }
+
+        .nationality {
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 16.8px; /* Increased by 5% from 16px */
+            color: #5f554d;
+            margin-bottom: 5px; /* Same margin as between title and location */
+            font-weight: 400; /* Regular not bold */
+        }
+
+        .dob {
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 16.8px; /* Increased by 5% from 16px */
+            color: #5f554d;
+            margin-bottom: 20px; /* Same bottom margin as before */
+            font-weight: 400; /* Regular not bold */
+        }
+
+        .text-box {
+            background-color: #5e787d; /* Box color */
+            width: 100vw; /* Full screen width */
+            margin-left: calc(-50vw + 50%); /* Center full width box */
+            padding: 10px 20px; /* Further reduced top and bottom padding */
+            text-align: center;
+            margin-bottom: 15px; /* Reduced margin above portfolio button */
+        }
+
+        .text-box-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 19px; /* Changed to 19px */
+            font-weight: 500; /* Changed to 500 */
+            color: #000000; /* Dark jet black */
+            line-height: 1.5;
+        }
+
+        .portfolio-btn {
+            display: inline-block;
+            margin: 5px 0 10px 0; /* Reduced top margin */
+            transition: all 0.3s ease;
+            width: 35%; /* Increased by 10% from 23.52% */
+            position: relative;
+        }
+
+        .portfolio-btn::after {
+            content: "Portfolio"; /* Fallback text */
+            display: none;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .portfolio-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-btn img {
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-btn:hover img {
+            filter: brightness(1.1) drop-shadow(0 0 8px rgba(62, 210, 247, 0.5));
+        }
+
+        .resume-btn {
+            display: inline-block;
+            margin: 0 0 5px 0; /* Reduced bottom margin by 50% */
+            transition: all 0.3s ease;
+            width: 20%; /* Increased by 10% from 11.76% */
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .resume-btn img {
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+
+        .resume-btn:hover img {
+            filter: brightness(1.1) drop-shadow(0 0 8px rgba(62, 210, 247, 0.5));
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px; /* Reduced margin above social buttons */
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-btn:hover img {
+            filter: brightness(1) drop-shadow(0 0 15px rgba(62, 210, 247, 0.8));
+        }
+
+        .social-btn img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .photo-container {
+                width: 185.9px;
+                height: 185.9px;
+                margin: 0 auto 26px;
+                border: 2px solid white;
+                box-shadow: 0 0 15px 4px rgba(62, 210, 247, 0.6); /* Adjusted glow for tablet */
             }
-        });
-        
-        // Close the modal with the Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modal.style.display = 'none';
+            
+            .name {
+                font-size: 25.2px; /* Increased by 5% from 24px */
             }
-        });
-    });
-  </script>
-</body>
+            
+            .title {
+                font-size: 15.12px; /* Increased by 5% from 14.4px */
+                font-weight: 400; /* Changed from 600 (bold) to 400 (regular) */
+            }
+            
+            .location {
+                font-size: 16.8px; /* Increased by 5% from 16px */
+                margin-bottom: 12px; /* Increased for tablet */
+            }
+            
+            .nationality {
+                font-size: 15.75px; /* Increased by 5% from 15px */
+                margin-bottom: 5px;
+            }
+            
+            .dob {
+                font-size: 15.75px; /* Increased by 5% from 15px */
+                margin-bottom: 18px;
+            }
+            
+            .text-box {
+                padding: 8px 20px; /* Further reduced for tablet */
+                margin-bottom: 12px; /* Reduced for tablet */
+            }
+            
+            .text-box-content {
+                font-size: 16px;
+                font-weight: 500; /* Changed to 500 */
+                color: #000000; /* Dark jet black */
+            }
+            
+            .portfolio-btn {
+                width: 29.568%; /* Increased by 10% from 26.88% */
+                margin: 4px 0 8px 0; /* Reduced for tablet */
+            }
+            
+            .resume-btn {
+                width: 14.784%; /* Increased by 10% from 13.44% */
+                margin: 0 0 6px 0; /* Reduced by 50% for tablet */
+            }
+            
+            .social-buttons {
+                margin-top: 12px; /* Reduced for tablet */
+            }
+            
+            .social-btn {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .social-btn img {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .social-buttons {
+                gap: 12.5px;
+            }
+        }
 
-
-
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer>
+        @media (max-width: 480px) {
+            .photo-container {
+                width: 157.3px;
+                height: 157.3px;
+                margin: 0 auto 20px;
+                border: 2px solid white;
+                box-shadow: 0 0 12px 3px rgba(62, 210, 247, 0.6); /* Adjusted glow for mobile */
+            }
+            
+            .name {
+                font-size: 20.16px; /* Increased by 5% from 19.2px */
+            }
+            
+            .title {
+                font-size: 12.6px; /* Increased by 5% from 12px */
+                font-weight: 400; /* Changed from 600 (bold) to 400 (regular) */
+            }
+            
+            .location {
+                font-size: 15.75px; /* Increased by 5% from 15px */
+                margin-bottom: 10px; /* Increased for mobile */
+            }
+            
+            .nationality {
+                font-size: 14.7px; /* Increased by 5% from 14px */
+                margin-bottom: 5px;
+            }
+            
+            .dob {
+                font-size: 14.7px; /* Increased by 5% from 14px */
+                margin-bottom: 15px;
+            }
+            
+            .text-box {
+                padding: 6px 20px; /* Further reduced for mobile */
+                margin-bottom: 10px; /* Reduced for mobile */
+            }
+            
+            .text-box-content {
+                font-size: 14px;
+                font-weight: 500; /* Changed to 500 */
+                color: #000000; /* Dark jet black */
+            }
+            
+            .portfolio-btn {
+                width: 33.264%; /* Increased by 10% from 30.24% */
+                margin: 3px 0 7px 0; /* Reduced for mobile */
+            }
+            
+            .resume-btn {
+                width: 16.632%; /* Increased by 10% from 15.12% */
+                margin: 0 0 5px 0; /* Reduced by 50% for mobile */
+            }
+            
+            .social-buttons {
+                margin-top: 10px; /* Reduced for mobile */
+            }
+            
+            .social-btn {
+                width: 64px;
+                height: 64px;
+            }
+            
+            .social-btn img {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .social-buttons {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-      <div class="footer-links">
-        <div class="copyright">
-          <span class="copyright-text" style="font-size: 50%; color: #A19C9C;">
-            <span class="copyright-symbol">&copy;</span> 2025 MudassarPatel. All rights reserved.
-          </span>
+        <!-- Photo container with glow effect -->
+        <div class="photo-container">
+            <img src="./images/photo.png" alt="Mudassar Patel Photo">
         </div>
-      </div>
+        
+        <h1 class="name">MUDASSAR PATEL</h1>
+        
+        <h2 class="title">Interior & Architectural Draughtsman</h2>
+        
+        <p class="location">Riyadh - KSA</p>
+        <p class="nationality">Nationality: Indian</p>
+        <p class="dob">Date of Birth : 20/04/1982</p>
+        
+        <!-- New text box -->
+        <div class="text-box">
+            <div class="text-box-content">
+                Proficient Interior & Architectural Draughtsman | Skilled AutoCAD Operator with 22+ years, diverse construction experience.
+                Adaptable to various work environments and thrives in high-pressure settings. Actively pursuing a role that presents challenging
+                projects and fosters continual learning opportunities.
+            </div>
+        </div>
+        
+        <a href="./projects.html" class="portfolio-btn">
+            <img src="./images/portfoliobtn.png" alt="Portfolio">
+        </a>
+        
+        <br>
+        
+        <a href="https://www.canva.com/design/DAGxXlSQ5XU/jwOSUqWcUu7HE78QZPZvJw/view?utm_content=DAGxXlSQ5XU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h712b7a3d2c" class="resume-btn" target="_blank">
+            <img src="./images/resume.png" alt="Resume">
+        </a>
+        
+        <div class="social-buttons">
+            <a href="https://wa.me/+966536769519" class="social-btn" target="_blank">
+                <img src="./images/whatsapp.png" alt="WhatsApp">
+            </a>
+            
+            <a href="http://www.linkedin.com/in/mudassar-patel-26716634" class="social-btn" target="_blank">
+                <img src="./images/linkedin.png" alt="LinkedIn">
+            </a>
+            
+            <a href="tel:+966536769519" class="social-btn">
+                <img src="./images/call.png" alt="Call">
+            </a>
+            
+            <a href="mailto:patelmdsr@gmail.com" class="social-btn">
+                <img src="./images/mail.png" alt="Email">
+            </a>
+        </div>
     </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script src="js/pdf-viewer.js"></script>
 </body>
 </html>
