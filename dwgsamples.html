@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAD Drawings and Documents Samples</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pdf-viewer.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="./index.html" class="back-button">← Back</a>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="./index.html" class="logo-link">
+        <div class="logo">
+          <img src="images/logo.png" alt="Personal Logo" class="logo-img">
+        </div>
+      </a>
+      <h1 class="project-name">CAD Drawings and Documents Samples</h1>
+    </div>
+  </header>
+
+  <main>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .heading {
+            font-family: 'Arial MT Pro', Arial, sans-serif;
+            font-size: 20px; /* Increased by 5% from 16.5px */
+            margin-bottom: 15px; /* Increased margin to create 1 line gap */
+            font-weight: 600;
+        }
+
+        .sample-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px; /* Reduced margin above sample buttons */
+            flex-wrap: wrap;
+        }
+
+        .sample-btn {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .sample-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .sample-btn:hover img {
+            filter: brightness(1) drop-shadow(0 0 15px rgba(62, 210, 247, 0.8));
+        }
+
+        .sample-btn img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            transition: all 0.3s ease;
+        }
+
+        /* Text under button styles */
+        .sample-text {
+            margin-top: 3px;
+            font-size: 14px;
+            color: rgb(197, 197, 197);
+            transition: all 0.3s ease;
+        }
+
+        .sample-item:hover .sample-text {
+            text-shadow: 0 0 15px rgba(62, 210, 247, 0.8);
+        }
+
+        .sample-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 90%;
+            }
+            
+            .text-box-content {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 16px;
+                margin-bottom: 12px; /* Increased for tablet */
+            }
+            
+            .sample-buttons {
+                margin-top: 12px; /* Reduced for tablet */
+            }
+            
+            .sample-btn {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .sample-btn img {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .sample-buttons {
+                gap: 12px;
+            }
+            
+            .sample-text {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .heading {
+                font-size: 14px;
+                margin-bottom: 10px; /* Increased for mobile */
+            }
+            
+            .sample-buttons {
+                margin-top: 10px; /* Reduced for mobile */
+            }
+            
+            .sample-btn {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .sample-btn img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .sample-buttons {
+                gap: 10px;
+            }
+            
+            .sample-text {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .name {
+                font-size: 22px;
+            }
+            
+            .title {
+                font-size: 14px;
+            }
+            
+            .heading {
+                font-size: 13px;
+            }
+            
+            .sample-btn {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .sample-btn img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .sample-text {
+                font-size: 11px;
+            }
+        }
+    </style>
+
+    <p class="heading">🏠 Residential Interior - Samples : </p>
+
+    <!-- Btn1 -->
+    <div class="sample-buttons">
+        <a href="./docs/int-bah-ryd.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-cad.png" alt="CAD Samples">
+            </div>
+            <div class="sample-text">CAD</div>
+        </a>
+
+    <!-- Btn2 -->
+            <a href="./docs/int-bah-finishing.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-fin.png" alt="Finishing Schedule">
+            </div>
+            <div class="sample-text">Finishes</div>
+        </a>
+
+    <!-- Btn3 -->    
+             <a href="./docs/int-bah-sanitaryware.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-san.png" alt="Sanitaryware Samples">
+            </div>
+            <div class="sample-text">Sanitaryware</div>
+        </a>
+
+<!-- Btn4 -->
+              <a href="./docs/int-bah-hardware.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-hardware.png" alt="hardware Samples">
+            </div>
+            <div class="sample-text">Hardware</div>
+        </a>
+
+<!-- Btn5 -->
+              <a href="./docs/int-bah-boards.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-boards.png" alt="Moodboard Samples">
+            </div>
+            <div class="sample-text">Boards</div>
+        </a>
+
+
+
+
+    </div>
+
+
+
+    <!-- Horizontal Divider -->
+      <div style="height: 1px; background-color: #444; margin: 40px 0;"></div>
+
+
+
+
+
+
+ <p class="heading">🏢 Commercial Interior - Samples : </p>
+
+    <!-- Btn1 -->
+    <div class="sample-buttons">
+        <a href="./docs/int-edb-bahrain.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-cad.png" alt="CAD Samples">
+            </div>
+            <div class="sample-text">CAD</div>
+        </a>
+
+    <!-- Btn2 -->
+            <a href="./docs/int-edb-fin.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-fin.png" alt="Finishing Schedule">
+            </div>
+            <div class="sample-text">Finishes</div>
+        </a>
+
+    <!-- Btn3 -->    
+             <a href="./docs/int-edb-san.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-san.png" alt="Sanitaryware Samples">
+            </div>
+            <div class="sample-text">Sanitaryware</div>
+        </a>
+
+<!-- Btn4 -->
+              <a href="./docs/int-edb-hardware.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-hardware.png" alt="hardware Samples">
+            </div>
+            <div class="sample-text">Hardware</div>
+        </a>
+
+<!-- Btn5 -->
+              <a href="./docs/int-edb-boards.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-boards.png" alt="Moodboard Samples">
+            </div>
+            <div class="sample-text">Boards</div>
+        </a>
+    </div>
+
+
+
+      <!-- Horizontal Divider -->
+      <div style="height: 1px; background-color: #444; margin: 40px 0;"></div>
+
+
+
+
+
+
+ <p class="heading">🕌 Mosque Architecture - Samples : </p>
+
+    <!-- Btn1 -->
+    <div class="sample-buttons">
+        <a href="./docs/marat-mosque-arch-package.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-cad.png" alt="CAD Samples">
+            </div>
+            <div class="sample-text">CAD</div>
+        </a>
+  </div>
+   
+
+ 
+       <!-- Horizontal Divider -->
+      <div style="height: 1px; background-color: #444; margin: 40px 0;"></div>
+
+
+
+
+ <p class="heading">🏠 Residential Architecture - Samples : </p>
+
+    <!-- Btn1 -->
+    <div class="sample-buttons">
+        <a href="./docs/arch-nakheel-ryd.pdf" class="sample-item" target="_blank">
+            <div class="sample-btn">
+                <img src="./images/smpl-btn-cad.png" alt="CAD Samples">
+            </div>
+            <div class="sample-text">CAD</div>
+        </a>
+  </div>
+   
+
+   
+
+
+
+
+    
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="js/pdf-viewer.js"></script>
+   </body> 
+</html>
